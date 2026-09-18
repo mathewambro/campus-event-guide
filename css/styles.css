@@ -1,0 +1,216 @@
+/*
+    Name: Mathew Ambrosino
+    Date: 09.18.2026
+    CSC 372-01
+
+    This stylesheet controls the appearance, layout, and responsive design
+    of the Spartan Campus Events Website.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f2f2f2;
+    color: #222222;
+    font-family: Aerial, sans-serif;
+}
+
+header {
+    background-color: #c5ac5b;
+    color: rgb(51, 45, 45);
+    padding: 5px;
+    text-align: center;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #c5ac5b;
+    color: rgb(8, 8, 8);
+    padding: 20px;
+    text-align: center;
+}
+
+figcaption {
+    margin-top: 8px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header a,
+footer a {
+    color: rgb(6, 38, 219);
+}
+
+footer nav {
+    margin-top: 15px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #c5ac5b;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.category {
+    color: #b6603f;
+    font-weight: bold;
+}
+
+.event-card,
+.related-card {
+    border: 1px solid #1e3494;
+    border-radius: 5px;
+    background-color: white;
+    padding: 15px;
+}
+
+.event-card img,
+.related-card img {
+    width: 100%;
+}
+
+.related-card {
+    flex: 1 1 220px;
+}
+
+#hero {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+}
+
+#hero-content {
+    margin-bottom: 20px;
+}
+
+#event-grid {
+    display: grid;
+    border-radius: 5px;
+    background-color: #c5ac5b;
+    padding: 20px;
+}
+
+#about {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+#event-introduction {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+}
+
+#event-introduction div {
+    margin-bottom: 20px;
+}
+
+#event-layout {
+    display: grid;
+    grid-template: 1fr;
+    gap: 20px;
+}
+
+#event-layout article,
+#event-layout aside {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+}
+
+#related-events {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    padding: 20px;
+}
+
+#related-event-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media screen and (width >=600px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #hero {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    #hero-content,
+    #hero figure {
+        flex: 1;
+    }
+
+    #hero-content {
+        margin-bottom: 0;
+    }
+
+    #event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #event-introduction {
+        display: flex;
+        align-items: center;
+        gap: 25px
+    }
+
+    #event-introduction div,
+    #event-introduction figure {
+        flex: 1;
+    }
+
+    #event-introduction div {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (width >=900px) {
+    #event-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #featured-card {
+        grid-column: span 2;
+    }
+
+    #event-layout {
+        grid-template-columns: 2fr 1fr;
+    }
+}
