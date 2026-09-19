@@ -18,6 +18,15 @@ body {
     font-family: Aerial, sans-serif;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
+figure {
+    margin: 0;
+}
+
 header {
     background-color: #c5ac5b;
     color: rgb(51, 45, 45);
@@ -109,6 +118,8 @@ footer nav {
 
 #event-grid {
     display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
     border-radius: 5px;
     background-color: #c5ac5b;
     padding: 20px;
@@ -132,9 +143,9 @@ footer nav {
     margin-bottom: 20px;
 }
 
-#event-layout {
+event-layout {
     display: grid;
-    grid-template: 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
@@ -158,7 +169,7 @@ footer nav {
     gap: 20px;
 }
 
-@media screen and (width >=600px) {
+@media screen and (min-width: 600px) {
     header {
         display: flex;
         justify-content: space-between;
@@ -188,12 +199,18 @@ footer nav {
     #event-introduction {
         display: flex;
         align-items: center;
-        gap: 25px
+        gap: 25px;
     }
 
-    #event-introduction div,
+    #event-introduction div {
+        flex: 1;
+        min-width: 0;
+    }
+
     #event-introduction figure {
         flex: 1;
+        min-width: 0;
+        max-width: 50%;
     }
 
     #event-introduction div {
@@ -201,7 +218,7 @@ footer nav {
     }
 }
 
-@media screen and (width >=900px) {
+@media screen and (min-width: 900px) {
     #event-grid {
         grid-template-columns: repeat(3, 1fr);
     }
