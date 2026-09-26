@@ -231,3 +231,28 @@ event-layout {
         grid-template-columns: 2fr 1fr;
     }
 }
+
+.save-button {
+    margin-top: 15px;
+    border: 1px solid #1f3888;
+    border-radius: 5px;
+    background-color: #c5ac5b;
+    color: #111010;
+    padding: 5px 10px;
+}
+
+.saved-event {
+    border: 3px solid #83472f;
+    background-color: fff4cc;
+}
+
+#saved-events {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+}
+
+#saved-events-list{
+    padding-left: 25px;
+}

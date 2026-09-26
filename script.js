@@ -11,8 +11,9 @@
 
 window.addEventListener("load", init);
 
-//adds the save buttons to every event card + saved events
-
+/**
+ * adds the save buttons to every event card + saved events
+*/
 function init() {
     let eventCards = document.querySelectorAll(".event-card");
 
@@ -30,8 +31,9 @@ function init() {
     }
 }
 
-//creates the saved events section at end of page
-
+/**
+ * creates the saved events section at end of page
+*/
 function createSavedEventsSections() {
     let main = document.querySelector("main");
     let savedSection = document.createElement("section");
@@ -52,8 +54,9 @@ function createSavedEventsSections() {
     main.appendChild(savedSection);
 }
 
-//saves or removes the event belonging to the clicked button
-
+/**
+ * saves or removes the event belonging to the clicked button
+*/
 function toggleEvent(event) {
     let saveButton = event.currentTarget;
     let eventCard = saveButton.parentNode;
